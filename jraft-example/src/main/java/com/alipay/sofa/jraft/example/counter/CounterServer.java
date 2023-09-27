@@ -100,6 +100,11 @@ public class CounterServer {
         return response;
     }
 
+    /**
+     *
+     * @param args  /Users/demussong/learn/sofa-jraft/dataPath test localhost:8083 localhost:8083,localhost:8084
+     * @throws IOException
+     */
     public static void main(final String[] args) throws IOException {
         if (args.length != 4) {
             System.out

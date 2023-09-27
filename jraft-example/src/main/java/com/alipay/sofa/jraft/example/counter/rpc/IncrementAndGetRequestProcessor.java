@@ -56,6 +56,7 @@ public class IncrementAndGetRequestProcessor extends AsyncUserProcessor<Incremen
         }
 
         final ValueResponse response = new ValueResponse();
+        // todo closure用法
         final IncrementAndAddClosure closure = new IncrementAndAddClosure(counterServer, request, response,
                 status -> {
                     if (!status.isOk()) {
