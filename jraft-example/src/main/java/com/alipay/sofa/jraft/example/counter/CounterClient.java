@@ -30,6 +30,7 @@ import com.alipay.sofa.jraft.rpc.impl.cli.BoltCliClientService;
 
 public class CounterClient {
 
+    //  test localhost:8083,localhost:8084
     public static void main(final String[] args) throws Exception {
         if (args.length != 2) {
             System.out.println("Useage : java com.alipay.sofa.jraft.example.counter.CounterClient {groupId} {conf}");

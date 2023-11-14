@@ -134,6 +134,7 @@ public class JraftRpcAddressParser extends RpcAddressParser {
         final String uniqueKey = ip + RemotingAddressParser.COLON + port + RemotingAddressParser.COLON + "jraft";
         parsedUrl = new Url(url, ip, Integer.parseInt(port), uniqueKey, properties);
         this.initUrlArgs(parsedUrl);
+        // todo 软引用
         Url.parsedUrls.put(url, new SoftReference<>(parsedUrl));
         return parsedUrl;
     }

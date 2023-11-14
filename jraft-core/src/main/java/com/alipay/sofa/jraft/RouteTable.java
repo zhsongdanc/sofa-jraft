@@ -358,6 +358,7 @@ public class RouteTable {
 
     private static class GroupConf {
 
+        // todo 了解原理，这里为什么用这个
         private final StampedLock stampedLock = new StampedLock();
 
         private Configuration     conf;

@@ -34,12 +34,14 @@ public class NodeOptions extends RpcOptions {
     // A follower would become a candidate if it doesn't receive any message
     // from the leader in |election_timeout_ms| milliseconds
     // Default: 1000 (1s)
+    // todo 看先变为follower还是超时后再变的
     private int              electionTimeoutMs      = 1000;                                         // follower to candidate timeout
 
     // Leader lease time's ratio of electionTimeoutMs,
     // To minimize the effects of clock drift, we should make that:
     // clockDrift + leaderLeaseTimeoutMs < electionTimeout
     // Default: 90, Max: 100
+    // todo ？
     private int              leaderLeaseTimeRatio   = 90;
 
     // A snapshot saving would be triggered every |snapshot_interval_s| seconds
